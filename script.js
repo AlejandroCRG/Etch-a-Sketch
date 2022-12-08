@@ -1,14 +1,18 @@
 let gridbtn = document.createElement('button')
 let body = document.querySelector('body')
 let divcontainer = document.querySelector('.grid-container')
-setSize(16)
 
+input = 16
+setSize(input)
 
+function getImput(){
+    input = prompt('Set size brudda')
+    return input
+}
 
 function setSize(input){
     let gridarrays = document.querySelectorAll('.grid')
     gridarrays.forEach((grid) => grid.remove())
-    input = prompt('Set size brudda')
     divcontainer.style.gridTemplateColumns = `repeat(${input}, 1fr)`
     divcontainer.style.gridTemplateRows = `repeat(${input}, 1fr)`
     let value = input * input
@@ -27,5 +31,6 @@ function setSize(input){
 
 let button = document.querySelector('.sizebtn')
 button.addEventListener('click', function(e){
-    setSize()
+    getImput()
+    setSize(input)
 })
