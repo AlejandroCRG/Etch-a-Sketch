@@ -1,6 +1,26 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px
+}
+
+
 .grid-container{
     display: grid;
-    grid-template-columns: repeat(16, 16px);
-    grid-template-rows: repeat(16, 16px);
-    justify-content: center;
+    background-color: black;
+    padding: 1px;
+    width: 500px;
+    height: 500px;
+}
+
+.grid{
+    transition: 0.25s;
+    background-color: #ffffff;
+    border: 0.1px solid black;
+}
+
+.grid:hover{
+    background-color: black;
 }
